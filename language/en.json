@@ -3,7 +3,7 @@
   "spanish": "Spanish",
   "wedding_date": "04 Oct 2025",
   "wedding_title": "Alicia & Manuel\nWedding Ceremony",
-  "get_married": "Get Married",
+  "get_married": "We're getting married!",
   "save_the_date": "Save the date!",
   "wedding_countdown_title": "The Wedding Countdown",
   "wedding_countdown_date": "4 October 2025",
@@ -38,5 +38,4 @@
   "form_arrival_bus_no": "Not using it",
   "form_return_bus": "Return bus",
   "form_return_bus_no": "Not using it"
-
 }

@@ -38,8 +38,8 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a class="active" href="index.html">English</a></li>
-                                    <li><a class="" href="index.html">Spanish</a></li>
+                                    <li><a class="active" href="index.html" id="english">English</a></li>
+                                    <li><a class="" href="index.html" id="spanish">Espa&ntilde;ol</a></li>
 
                                 </ul>
                             </nav>
@@ -382,6 +382,28 @@
 
     // Llama a la función al cargar la página
     window.addEventListener('DOMContentLoaded', () => loadLanguage('en'));
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const englishBtn = document.getElementById('english');
+        const spanishBtn = document.getElementById('spanish');
+
+        englishBtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que recargue la página
+            englishBtn.classList.add('active');
+            spanishBtn.classList.remove('active');
+            loadLanguage('en');
+        });
+
+        spanishBtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que recargue la página
+            englishBtn.classList.remove('active');
+            spanishBtn.classList.add('active');
+            loadLanguage('es');
+        });
+
+
+    });
+
 </script>
 
 </body>
