@@ -37,5 +37,7 @@
   "form_arrival_bus_yes": "Lo utilizaré",
   "form_arrival_bus_no": "No lo utilizaré",
   "form_return_bus": "Autobús de regreso",
-  "form_return_bus_no": "No lo utilizaré"
+  "form_return_bus_no": "No lo utilizaré",
+  "form_menu": "¿Sigues alguna dieta esteciífica?",
+  "form_additional": "Comentarios adicionales"
 }
