@@ -54,35 +54,34 @@ async function loadLanguage(lang = 'en') {
 
     $('select').niceSelect('update');
 }
+var menu = $('ul#navigation');
 
-function refreshLanguage() {
-    const englishBtn = document.getElementsByClassName('english')[0];
-    const spanishBtn = document.getElementsByClassName('spanish')[0];
-
-    englishBtn.addEventListener('click', function (event) {
-        event.preventDefault(); // Evita que recargue la página
-        englishBtn.classList.add('active');
-        spanishBtn.classList.remove('active');
-        loadLanguage('en');
-    });
-
-    spanishBtn.addEventListener('click', function (event) {
-        event.preventDefault(); // Evita que recargue la página
-        englishBtn.classList.remove('active');
-        spanishBtn.classList.add('active');
-        loadLanguage('es');
-    });
-}
-
-    var menu = $('ul#navigation');
 if(menu.length){
 	menu.slicknav({
 		prependTo: ".mobile_menu",
 		closedSymbol: '+',
-		openedSymbol:'-'
+		openedSymbol:'-',
+        init: function(){
+            const enlaces = document.querySelectorAll('a');
+
+            const englishBtn = enlaces[3];
+            const spanishBtn = enlaces[4];
+
+            englishBtn.addEventListener('click', function (event) {
+                event.preventDefault(); // Evita que recargue la página
+                englishBtn.classList.add('active');
+                spanishBtn.classList.remove('active');
+                loadLanguage('en');
+            });
+
+            spanishBtn.addEventListener('click', function (event) {
+                event.preventDefault(); // Evita que recargue la página
+                englishBtn.classList.remove('active');
+                spanishBtn.classList.add('active');
+                loadLanguage('es');
+            });}
 	});
-    refreshLanguage();
-};
+}
 // blog-menu
   // $('ul#blog-menu').slicknav({
   //   prependTo: ".blog_menu"

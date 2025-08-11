@@ -38,8 +38,8 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li class="english"><a class="active english" href="#" id="english">English</a></li>
-                                    <li class="spanish"><a  href="#" id="spanish">Espa&ntilde;ol</a></li>
+                                    <li><a class="active" href="#" id="english">English</a></li>
+                                    <li><a  href="#" id="spanish">Espa&ntilde;ol</a></li>
 
                                 </ul>
                             </nav>
@@ -427,25 +427,6 @@
         $('select').niceSelect('update');
     }
 
-    function refreshLanguage() {
-        const englishBtn = document.getElementsByClassName('english')[0];
-        const spanishBtn = document.getElementsByClassName('spanish')[0];
-
-        englishBtn.addEventListener('click', function (event) {
-            event.preventDefault(); // Evita que recargue la página
-            englishBtn.classList.add('active');
-            spanishBtn.classList.remove('active');
-            loadLanguage('en');
-        });
-
-        spanishBtn.addEventListener('click', function (event) {
-            event.preventDefault(); // Evita que recargue la página
-            englishBtn.classList.remove('active');
-            spanishBtn.classList.add('active');
-            loadLanguage('es');
-        });
-    }
-
     const scriptURL =
         "https://script.google.com/macros/s/AKfycbx0XnGirSaf-h1dFZArTYYfP76PPeWUO3BI0V4H5T801JSSJGririM_WN2iobfMKxC7/exec";
     const form1 = document.forms["submit-to-google-sheet"];
@@ -496,7 +477,24 @@
     // Llama a la función al cargar la página
     window.addEventListener('DOMContentLoaded', () => loadLanguage('en'));
 
-    document.addEventListener('DOMContentLoaded', refreshLanguage());
+    document.addEventListener('DOMContentLoaded', function () {
+        const englishBtn = document.getElementById('english');
+        const spanishBtn = document.getElementById('spanish');
+
+        englishBtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita que recargue la página
+            englishBtn.classList.add('active');
+            spanishBtn.classList.remove('active');
+            loadLanguage('en');
+        });
+
+        spanishBtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita que recargue la página
+            englishBtn.classList.remove('active');
+            spanishBtn.classList.add('active');
+            loadLanguage('es');
+        });
+    });
 
 </script>
 
