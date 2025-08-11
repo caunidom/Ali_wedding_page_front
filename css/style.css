@@ -1088,7 +1088,7 @@ h3 {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-160%, -50%) rotate(45deg);
   background: #C78665;
   padding: 126px 55px;
   -webkit-border-radius: 50%;
@@ -1108,10 +1108,14 @@ h3 {
     right: 0;
     margin: auto;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(40%);
     display: inline-block;
     width: 270px;
     height: 270px;
+  }
+
+  .weeding_countdown_area {
+    margin-top: 10em;
   }
 }
 
@@ -1126,7 +1130,7 @@ h3 {
     right: 0;
     margin: auto;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(40%);
     display: inline-block;
     width: 270px;
     height: 270px;
@@ -1137,7 +1141,7 @@ h3 {
   /* line 37, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
   .slider_area_inner .slider_text {
     transform: rotate(0deg);
-    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transform: translateX(-50%) translateY(40%) rotate(0deg);
     padding: 70px 25px;
   }
 }
