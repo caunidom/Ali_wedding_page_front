@@ -16,13 +16,72 @@ $(window).on('scroll', function () {
 $(document).ready(function(){
 
 // mobile_menu
-var menu = $('ul#navigation');
+async function loadLanguage(lang = 'en') {
+    const response = await fetch(`language/${lang}.json`);
+    const translations = await response.json();
+
+    // Aplica traducción para textos interiores (innerText/innerHTML)
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[key]) {
+            element.innerText = translations[key];
+        }
+    });
+
+    // Aplica traducción para placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[key]) {
+            element.placeholder = translations[key];
+        }
+    });
+
+    // Opcionales: para labels de selects, alt, title, etc.
+    document.querySelectorAll('[data-i18n-label]').forEach(element => {
+        const key = element.getAttribute('data-i18n-label');
+        if (translations[key]) {
+            element.label = translations[key];
+        }
+    });
+
+    // Opcionales: para labels de selects, alt, title, etc.
+    document.querySelectorAll('[data-i18n-option]').forEach(element => {
+        const key = element.getAttribute('data-i18n-option');
+        if (translations[key]) {
+            element.text = translations[key];
+        }
+    });
+
+    $('select').niceSelect('update');
+}
+
+function refreshLanguage() {
+    const englishBtn = document.getElementsByClassName('english')[0];
+    const spanishBtn = document.getElementsByClassName('spanish')[0];
+
+    englishBtn.addEventListener('click', function (event) {
+        event.preventDefault(); // Evita que recargue la página
+        englishBtn.classList.add('active');
+        spanishBtn.classList.remove('active');
+        loadLanguage('en');
+    });
+
+    spanishBtn.addEventListener('click', function (event) {
+        event.preventDefault(); // Evita que recargue la página
+        englishBtn.classList.remove('active');
+        spanishBtn.classList.add('active');
+        loadLanguage('es');
+    });
+}
+
+    var menu = $('ul#navigation');
 if(menu.length){
 	menu.slicknav({
 		prependTo: ".mobile_menu",
 		closedSymbol: '+',
 		openedSymbol:'-'
 	});
+    refreshLanguage();
 };
 // blog-menu
   // $('ul#blog-menu').slicknav({
@@ -233,6 +292,7 @@ dots:false,
 if (document.getElementById('default-select')) {
   $('select').niceSelect();
 }
+
 
   //about-pro-active
 $('.details_active').owlCarousel({
