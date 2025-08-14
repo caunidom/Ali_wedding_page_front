@@ -38,8 +38,8 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a class="active" href="#" id="english">English</a></li>
-                                    <li><a  href="#" id="spanish">Espa&ntilde;ol</a></li>
+                                    <li><a class="active" href="#" id="spanish">Espa&ntilde;ol</a></li>
+                                    <li><a href="#" id="english">English</a></li>
 
                                 </ul>
                             </nav>
@@ -218,8 +218,7 @@
                                             <div class="col-xl-12">
                                                 <label data-i18n="form_menu">Do you follow any specific diet?</label>
                                                 <select class="form-select wide" name="Menu">
-                                                    <option value="No" disabled selected data-i18n-option="form_arrival_bus_no">Select an option</option>
-                                                    <option value="No" data-i18n-option="form_menu_no">No</option>
+                                                    <option value="No" selected data-i18n-option="form_menu_no">No</option>
                                                     <option value="vegetariana" data-i18n-option="form_menu_veggie">Vegetarian</option>
                                                     <option value="vegana" data-i18n-option="form_menu_vegan">Vegan</option>
                                                     <option value="sin_gluten" data-i18n-option="form_menu_vegan_gluten">Gluten free</option>
@@ -475,7 +474,7 @@
 
 
     // Llama a la función al cargar la página
-    window.addEventListener('DOMContentLoaded', () => loadLanguage('en'));
+    window.addEventListener('DOMContentLoaded', () => loadLanguage('es'));
 
     document.addEventListener('DOMContentLoaded', function () {
         const englishBtn = document.getElementById('english');
