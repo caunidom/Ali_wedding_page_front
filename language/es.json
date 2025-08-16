@@ -32,7 +32,7 @@
   "form_title": "¿Asistirás?",
   "form_description": "Hay algunos datos que necesitamos para organizar cada detalle. Por favor, responde a la encuesta antes del 10 de septiembre",
   "form_name_label": "Tu nombre",
-  "form_guests_label": "Cuantos vienen contigo (Por favor, especifica nombres en la sección de comentarios adicionales)",
+  "form_guests_label": "¿Cuantos niños vienen contigo? (Por favor, dinos su edad en los comentarios adicionales)",
   "form_guests_placeholder": "Número de invitados ",
   "form_arrival_bus": "Autobús de llegada (14.00)",
   "form_arrival_bus_yes": "Lo utilizaré",

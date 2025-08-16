@@ -31,7 +31,7 @@
   "form_title": "Are you attending?",
   "form_description": "There is some information we would need to know to organize every detail. Please kindly respond to the survey before September 10th",
   "form_name_label": "Your Name",
-  "form_guests_label": "How many guests will be coming with you? (Please specify names in additional information section)",
+  "form_guests_label": "How many children will be coming with you? (Please specify the age in additional information section)",
   "form_guests_placeholder": "Select number of guests",
   "form_arrival_bus": "Arrival Bus (14.00)",
   "form_arrival_bus_yes": "I'm using it",
