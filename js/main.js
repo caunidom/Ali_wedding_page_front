@@ -64,8 +64,8 @@ if(menu.length){
         init: function(){
             const enlaces = document.querySelectorAll('a');
 
-            const englishBtn = enlaces[3];
-            const spanishBtn = enlaces[4];
+            const spanishBtn = enlaces[3];
+            const englishBtn = enlaces[4];
 
             englishBtn.addEventListener('click', function (event) {
                 event.preventDefault(); // Evita que recargue la página
