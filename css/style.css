@@ -1053,6 +1053,19 @@ h3 {
   min-height: 400px;
 }
 
+@media (max-width: 1700px) {
+  .slider_bg_1 {
+    background-image: url('../img/wedding/4-vmovil.jpg') !important;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;    /* Esto solo funciona si el contenedor padre tiene altura definida */
+    min-height: 400px;
+  }
+}
+
+
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
 
 /* line 4, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
