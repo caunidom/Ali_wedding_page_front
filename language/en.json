@@ -33,7 +33,7 @@
   "form_name_label": "Your Name",
   "form_guests_label": "How many children will be coming with you? (Please specify the age in additional information section)",
   "form_guests_placeholder": "Select number of children",
-  "form_arrival_bus": "Arrival Bus (14:00)",
+  "form_arrival_bus": "Arrival Bus (13:00)",
   "form_arrival_bus_yes": "I'm using it",
   "form_arrival_bus_no": "Not using it",
   "form_return_bus": "Return bus",
