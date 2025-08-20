@@ -234,7 +234,7 @@
                                             </div>
 
                                             <div class="col-xl-12">
-                                                <button type="submit" class="boxed_btn3">Submit</button>
+                                                <button type="submit" class="boxed_btn3" data-i18n="submit_button"></button>
                                             </div>
                                         </div>
                                     </form>
@@ -339,7 +339,7 @@
                                             </div>
 
                                             <div class="col-xl-12">
-                                                <button type="submit" class="boxed_btn3">Submit</button>
+                                                <button type="submit" class="boxed_btn3" data-i18n="submit_button"></button>
                                             </div>
                                         </div>
                                     </form>
@@ -429,10 +429,14 @@
     const scriptURL =
         "https://script.google.com/macros/s/AKfycbx0XnGirSaf-h1dFZArTYYfP76PPeWUO3BI0V4H5T801JSSJGririM_WN2iobfMKxC7/exec";
     const form1 = document.forms["submit-to-google-sheet"];
+    const form2 = document.forms["submit-music"];
+
     form1.addEventListener("submit", (e) => {
         e.preventDefault();
         var formData = new FormData(form1);
+        var formu2 = new FormData(form2);
 
+        formData.append("Musica", formu2.get("Musica"));
         fetch(scriptURL, {method: "POST", body: formData})
             .then((response) => {
                 console.log(response)
@@ -445,11 +449,13 @@
                 swal("Error", "Something went wrong. please try again!", "error");
             });
     });
-    const form2 = document.forms["submit-music"];
     form2.addEventListener("submit", (e) => {
         e.preventDefault();
-        var formData = new FormData(form2);
+        var formData = new FormData(form1);
+        var formu2 = new FormData(form2);
 
+        formData.append("Musica", formu2.get("Musica"));
+        console.log(formData);
         fetch(scriptURL, {method: "POST", body: formData})
             .then((response) => {
                 console.log(response)
