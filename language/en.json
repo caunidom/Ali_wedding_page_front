@@ -21,7 +21,7 @@
   "dresscode_h3_lady_4": "White or off-white (reserved for the bride)",
   "dresscode_h3_lady_5": "Sequins or sparkly fabrics.",
   "dresscode_h3_gentlemen": "For gentlemen",
-  "dresscode_h3_gentlemen_1": "Classic formal suit in navy, grey, or beige.",
+  "dresscode_h3_gentlemen_1": "Classic formal suit in navy or grey.",
   "dresscode_h3_gentlemen_2": "White or light blue shirt.",
   "dresscode_h3_gentlemen_3": "Tie is mandatory.",
   "dresscode_h3_gentlemen_4": "No tie",
@@ -62,5 +62,6 @@
   "account": "Account number",
   "account_number": "29667071",
   "music_survey": "Music proposal",
-  "music_survey_desc": "If you have any song that you would like to hear at the party, please feel free to share it with us!"
+  "music_survey_desc": "If you have any song that you would like to hear at the party, please feel free to share it with us!",
+  "submit_button": "Submit"
 }

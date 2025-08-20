@@ -22,7 +22,7 @@
   "dresscode_h3_lady_4": "Blanco o marfil (reservado para la novia)",
   "dresscode_h3_lady_5": "Lentejuelas o tejidos brillantes.",
   "dresscode_h3_gentlemen": "Para los caballeros",
-  "dresscode_h3_gentlemen_1": "Traje formal clásico en azul marino, gris o beige.",
+  "dresscode_h3_gentlemen_1": "Traje formal clásico en azul marino o gris.",
   "dresscode_h3_gentlemen_2": "Camisa blanca o azul claro.",
   "dresscode_h3_gentlemen_3": "Corbata obligatoria, aunque sea de color o estampado divertido.",
   "dresscode_h3_gentlemen_4": "Sin corbata",
@@ -63,5 +63,6 @@
   "account": "Número de cuenta",
   "account_number": "29667071",
   "music_survey": "Propuestas de música",
-  "music_survey_desc": "Si tienes alguna canción que te gustaría escuchar en la fiesta, ¡déjanosla aquí abajo!"
+  "music_survey_desc": "Si tienes alguna canción que te gustaría escuchar en la fiesta, ¡déjanosla aquí abajo!",
+  "submit_button": "Enviar"
 }
